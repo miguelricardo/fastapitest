@@ -3,8 +3,7 @@ import asyncio
 
 async def get_data():
     async with httpx.AsyncClient() as client:
-        response = await client.get("http://127.0.0.1:8000/")
-        print(response.json)
+        response = await client.get("https://jsonplaceholder.typicode.com/todos/1")
         return response.json()
 
 async def main():
